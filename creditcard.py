@@ -34,7 +34,7 @@ train_new = pd.DataFrame({"Outstanding_Debt":[outstanding_Debt],"Monthly_Inhand_
 # Load the transformer
          
 
-trans=pkl.load(open(r'C:\Users\Yazeed\Downloads\transformer.pkl', 'rb'))
+trans=pkl.load(open('transformer.pkl', 'rb'))
 # Apply the transformer on the inputs
 
 X_new = trans.transform(train_new) 
@@ -42,7 +42,7 @@ X_new = trans.transform(train_new)
          
 # Load the model
 
-loaded_model=pkl.load(open(r'C:\Users\Yazeed\Downloads\XGboot.pkl','rb')) 
+loaded_model=pkl.load(open('XGboot.pkl','rb')) 
          
 # Predict the output
 credit_card_score_pre = loaded_model.predict(X_new)[0]
