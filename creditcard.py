@@ -35,6 +35,7 @@ train_new = pd.DataFrame({"Outstanding_Debt":[outstanding_Debt],"Monthly_Inhand_
          
 
 trans=pkl.load(open('transformer.pkl', 'rb'))
+
 # Apply the transformer on the inputs
 
 X_new = trans.transform(train_new) 
